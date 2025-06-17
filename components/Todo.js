@@ -1,10 +1,9 @@
 class Todo {
   constructor(data, selector) {
-    console.log(data);
-    console.log(selector);
     this._data = data;
     this._templateElement = document.querySelector(selector);
   }
+
   _setEventListeners() {
     this._todoCheckboxEl.addEventListener("change", () => {
       this._data.completed = !this._data.completed;

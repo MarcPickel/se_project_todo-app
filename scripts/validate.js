@@ -1,4 +1,4 @@
-//Delete file, per instructions: Task 1.4, before submitting porject.
+//Delete file, per instructions: Task 1.4, before submitting project.
 
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
   const errorElementId = `#${inputElement.id}-error`;
