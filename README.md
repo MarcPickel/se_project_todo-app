@@ -4,7 +4,7 @@ This is the seventh project in the Software Engineer Bootcamp offered by TripleT
 
 ## Functionality
 
-It is a simple Todo application which features a button that, when clicked, pops up a modal with a form and two input fields: one for a required todo name; the other for an optional date. Once submitted, the little todo is appended to the initial list of todos and features a unchecked checkbox and delete button - both being functional.
+It is a simple Todo application which features a button that, when clicked, pops up a modal with a form and two input fields: one for a required todo name; the other for an optional date. Once submitted, the little todo is appended to the initial list of todos and features an unchecked checkbox and delete button - both being functional.
 
 ## Technology
 
