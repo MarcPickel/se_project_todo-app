@@ -11,6 +11,7 @@ class Todo {
 
     this._todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
+      this._todoElement = null; // For JavaScript garbage control (to not pile up storage in the JavaScript Garbage Collector)
     });
   }
 
