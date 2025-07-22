@@ -23,10 +23,6 @@ function handleDelete(completed) {
   todoCounter.updateTotal(false);
 }
 
-//function handleTotal(totalled) {
-//  todoCounter.updateTotal(totalled);
-//}
-
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: (values) => {

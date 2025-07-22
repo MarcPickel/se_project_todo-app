@@ -16,7 +16,6 @@ class Todo {
       this._todoElement.remove();
       this._todoElement = null; // For JavaScript garbage control (to not pile up storage in the JavaScript Garbage Collector)
       this._handleDelete(this._data.completed);
-      this._handleTotal(this._data);
     });
   }
 
