@@ -23,6 +23,11 @@ function handleDelete(completed) {
   todoCounter.updateTotal(false);
 }
 
+function renderTodo(itemData) {
+  const todoElement = generateTodo(itemData);
+  section.addItem(todoElement);
+}
+
 const addTodoPopup = new PopupWithForm({
   popupSelector: "#add-todo-popup",
   handleFormSubmit: (values) => {
@@ -31,10 +36,9 @@ const addTodoPopup = new PopupWithForm({
     dateObj.setMinutes(dateObj.getMinutes() + dateObj.getTimezoneOffset());
 
     const id = uuidv4();
-    const todoData = { name: values.name, date: dateObj, id: id };
+    const itemData = { name: values.name, date: dateObj, id: id };
 
-    const todoElement = generateTodo(todoData);
-    section.addItem(todoElement);
+    renderTodo(itemData);
 
     todoCounter.updateTotal(true);
 
@@ -53,9 +57,8 @@ const generateTodo = (data) => {
 
 const section = new Section({
   items: initialTodos, //pass initial todos
-  renderer: (item) => {
-    const todoElement = generateTodo(item);
-    section.addItem(todoElement);
+  renderer: (itemData) => {
+    renderTodo(itemData);
   },
   containerSelector: ".todos__list",
 });
